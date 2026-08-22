@@ -54,14 +54,17 @@ pip install -r requirements.txt
 ## Running Tests
 
 Run all tests:
+```bash
 pytest
-
+```
 Run tests and generate Allure results:
+```bash
 pytest --alluredir=allure-results
-
+```
+```bash
 Serve the Allure report in your browser:
 allure serve allure-results
-
+```bash
 ---
 
 ## Key Features & Architecture
