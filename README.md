@@ -31,15 +31,18 @@ An automated API testing framework built with Python, PyTest, Requests, JSON Sch
 ## Setup & Installation
 
 1. Clone the repository:
+```bash
 git clone https://github.com/Assembledis/pet_proj-1.git
 cd pet_proj-1
 
 2. Set up a virtual environment:
+```bash
 python -m venv .venv
 source .venv/bin/activate  # On Linux/macOS
 # .venv\Scripts\activate   # On Windows
 
 3. Install dependencies:
+```bash
 pip install --upgrade pip
 pip install -r requirements.txt
 
