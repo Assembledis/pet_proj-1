@@ -64,7 +64,7 @@ pytest --alluredir=allure-results
 ```bash
 Serve the Allure report in your browser:
 allure serve allure-results
-```bash
+```
 ---
 
 ## Key Features & Architecture
