@@ -16,7 +16,7 @@ An automated API testing framework built with Python, PyTest, Requests, JSON Sch
 ---
 
 ## Project Structure
-
+```text
 .
 ├── api_clients/       # API clients (HTTP methods, endpoint wrappers)
 ├── config/            # Environment configurations and base URLs
@@ -25,7 +25,7 @@ An automated API testing framework built with Python, PyTest, Requests, JSON Sch
 ├── conftest.py        # PyTest fixtures (Dependency Injection, client init)
 ├── requirements.txt   # Project dependencies
 └── pytest.ini         # PyTest configuration and markers
-
+```
 ---
 
 ## Setup & Installation
