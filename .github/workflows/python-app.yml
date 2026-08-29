@@ -30,22 +30,17 @@ jobs:
     - name: Test with pytest
       run: |
         pytest --alluredir=allure-results
-
-    - name: Get Allure history
-      uses: actions/checkout@v4
-      if: always()
       continue-on-error: true
-      with:
-        ref: gh-pages
-        path: gh-pages
 
-    - name: Allure Report action from integration tests
-      uses: simple-elf/allure-report-action@v1.7
-      if: always()
+    - name: Install Allure CLI
+      uses: allure-framework/setup-allure@v0
       with:
-        allure_results: allure-results
-        gh_pages: gh-pages
-        allure_history: allure-history
+        allure-version: "2.24.0"
+
+    - name: Generate Allure Report
+      run: |
+        allure generate allure-results --clean -o allure-report
+      if: always()
 
     - name: Deploy report to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
@@ -53,4 +48,4 @@ jobs:
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         PUBLISH_BRANCH: gh-pages
-        PUBLISH_DIR: allure-history
+        PUBLISH_DIR: allure-report
